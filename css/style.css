@@ -4,7 +4,9 @@ body{
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:16px;
 	line-height:1.6em;
-	border: 50px;
+	border-left: 25px;
+	border-right: 25px;
+	border-color: darkgray;
 }
 
 .container{
