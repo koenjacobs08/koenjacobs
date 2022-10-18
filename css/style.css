@@ -1,5 +1,5 @@
 body{
-	background-color:white;
+	background-color:#d7d7d7;
 	color:#555;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:16px;
@@ -86,13 +86,15 @@ body{
   /* Fake image */
   .fakeimg {
 	background-color: #aaa;
-	width: 150%;
+	width: 145%;
 	padding: 20px;
+	
   }
   
   /* Add a card effect for articles */
   .card {
 	background-color: white;
+	width: 150%;
 	padding: 20px;
 	margin-top: 20px;
   }
