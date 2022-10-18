@@ -68,7 +68,13 @@ body{
 	text-align: center;
 	background: white;
   }
-  
+
+  .column {
+	float: left;
+	width: 25%;
+	padding: 5px;
+  }
+
   /* Create two unequal columns that floats next to each other */
   /* Left column */
   .leftcolumn {
@@ -86,11 +92,16 @@ body{
   /* Fake image */
   .fakeimg {
 	background-color: #aaa;
-	width: 145%;
+	width: 88.5%;
 	padding: 20px;
 	
   }
-  
+
+  .center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
   /* Add a card effect for articles */
   .card {
 	background-color: white;
@@ -110,8 +121,9 @@ body{
   .footer {
 	padding: 20px;
 	text-align: center;
-	background: #ddd;
+	background: white;
 	margin-top: 20px;
+	width: 100%;
   }
   
   /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -145,6 +157,6 @@ body{
   
   /* Add a color to the active/current link */
   .topnav a.active {
-	background-color: #0444aa;
+	background-color: #e50056;
 	color: white;
   }
