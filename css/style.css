@@ -86,14 +86,14 @@ body{
   /* Fake image */
   .fakeimg {
 	background-color: #aaa;
-	width: 100%;
+	width: 150%;
 	padding: 20px;
   }
   
   /* Add a card effect for articles */
   .card {
 	background-color: white;
-	padding: 0px;
+	padding: 20px;
 	margin-top: 20px;
   }
   
