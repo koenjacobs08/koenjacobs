@@ -121,7 +121,8 @@ body{
   .footer {
 	padding: 20px;
 	text-align: center;
-	background: white;
+	color: #e50056;
+	background-color: white;
 	margin-top: 20px;
 	width: 100%;
   }
@@ -160,3 +161,56 @@ body{
 	background-color: #e50056;
 	color: white;
   }
+  .clock {
+	height: 20vh;
+	color: #e50056;
+	font-size: 22vh;
+	font-family: sans-serif;
+	line-height: 20.4vh;
+	display: flex;
+	position: relative;
+	left: 20%;
+	/*background: green;*/
+	overflow: hidden;
+  }
+  
+  .clock::before, .clock::after {
+	content: '';
+	width: 7ch;
+	height: 3vh;
+	background: linear-gradient(to top, transparent, #aaa);
+	position: absolute;
+	z-index: 2;
+  }
+  
+  .clock::after {
+	bottom: 0;
+	background: linear-gradient(to bottom, transparent, #aaa);
+  }
+  
+  .clock > div {
+	display: flex;
+  }
+  
+  .tick {
+	line-height: 17vh;
+  }
+  
+  .tick-hidden {
+	opacity: 0;
+  }
+  
+  .move {
+	animation: move linear 1s infinite;
+  }
+  
+  @keyframes move {
+	from {
+	  transform: translateY(0vh);
+	}
+	to {
+	  transform: translateY(-20vh);
+	}
+  }
+  
+  
