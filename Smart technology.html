@@ -64,17 +64,15 @@
               <div class="card">
                <h2>Week 5</h2>
                <h5>22 September 2022</h5>
-               <div class="fakeimg" style="height:345px;">     
-              <div class="row">
+               <div class="fakeimg" style="height:350px;"><div class="row">
                   <div class="column">
-                   <img src="images/schema.PNG" alt="Schema" style="width:200%">
+                   <img src="images\board.png" alt="board" style="width:200%">
                   </div>
                   <div class="column"></div>
                   <div class="column">
-                   <img src="images/board.PNG" alt="Board" style="width:200%">
+                   <img src="images\schema.png" alt="schema" style="width:200%">
                   </div>
-                  </div>
-               </div>
+               </div></div>
                <p>Tijdens de laatste les over de IoT schakeling hebben we een uitleg gekregen over het ontwerpen van een PCB. Hierbij is ons verteld over hoe een PCB in zijn <br>
                   werk gaat, wat het betekend en hoe het ontworpen kan worden. Daarnaast was er in deze les nog een mogelijkheid om andere vragen te stellen over je IoT schakeling.<br>
                   Als je geen vragen had kon je dus al beginnen aan je PCB design. Ik had nog nooit van een de term PCB gehoord maar wist wel wat een moederbord was en hoe dat<br>
@@ -84,15 +82,20 @@
              </div>
              <div class="card">
                <h2>Week 14</h2>
-               <h5>24 November 2022</h5>
-               <div class="fakeimg" style="height:453px;"><div class="row">
-               <div class="column">
-                  <img src="images\solderen.jpg" alt="Solderen" style="width:200%">
-                 </div>
-                 <div class="column"></div>
-                 <div class="column">
-                  <img src="images\solderen2.jpg" alt="Solderen" style="width:200%">
-                 </div>
+               <h5>4 November 2022</h5>
+               <div class="fakeimg" style="height:449px;"><div class="row">
+                  <div class="column">
+                    <img class="myImages" id="myImg" src="images/solderen.jpg" alt="Voor het solderen" style="width:200%">
+                    </div>
+                    <div class="column"></div>
+                    <div class="column">
+                    <img class="myImages" id="myImg" src="images/solderen2.jpg" alt="Solderen klaar" style="width:200%">
+                    </div>
+                    <div id="myModal" class="modal">
+                      <span class="close">&times;</span>
+                      <img class="modal-content" id="img01">
+                      <div id="caption"></div>
+                    </div>
                </div></div>
                <p>Tekst over solderen van PCB</p>
              </div>
@@ -101,17 +104,22 @@
                <h5>5 Oktober tot en met 8 November 2022</h5>
                <div class="fakeimg" style="height:200px;"><div class="row">
                 <div class="column">
-                 <img src="images\componenten.png" alt="IoT" style="width:100%">
-                </div>
-                <div class="column">
-                 <img src="images\componenten2.png" alt="IoT" style="width:100%">
-                </div>
-                <div class="column">
-                 <img src="images\component3.png" alt="IoT" style="width:100%">
-                </div>
-                <div class="column">
-                 <img src="images\component4.png" alt="IoT" style="width:100%">
-                </div>
+                  <img class="myImages" id="myImg" src="images/componenten.png" alt="Plaatsen van componenten" style="width:100%">
+                  </div>
+                  <div class="column">
+                  <img class="myImages" id="myImg" src="images/componenten2.png" alt="Tekenen van bakje" style="width:100%">
+                  </div>
+                  <div class="column">
+                  <img class="myImages" id="myImg" src="images/component3.png" alt="Tekenen van de deksel" style="width:100%">
+                  </div>
+                  <div class="column">
+                  <img class="myImages" id="myImg" src="images/component4.png" alt="Het bakje in zijn geheel" style="width:100%">
+                  </div>
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                  </div>
              </div></div>
                <p>Tekst over 3D modelleren.</p>
             </div>
@@ -132,5 +140,31 @@
            </div>
          
    </body>
+<script>
+// create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
 
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
 </html>
