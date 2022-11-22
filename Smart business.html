@@ -29,14 +29,98 @@
          <div class="container">
             <div class="row">
               <div class="leftcolumn">
-                <div class="card">
-                  <h2>Over de minor</h2>
-                  <h5>13 januari, 2023</h5>
-                   <div class="fakeimg" style="height:540px;"><iframe src="/images/mijn_match_met_morgen.pdf" width="100%" height="500px" alt="HAN" class="center">
-                  </iframe>
+               <div class="card">
+                  <h2>Week 1</h2>
+                  <h5>31 Augustus tot en met 2 September, 2022</h5>
+                  <div class="fakeimg" style="height:500px;"><div class="row">
+                   <div class="column">
+                     <img class="myImages" id="myImg" src="images/smartbusiness.jpg" alt="De punten die iemand wil leren of al goed kan" style="width:200%">
+                     </div>
+                     <div class="column"></div>
+                     <div class="column">
+                     <img class="myImages" id="myImg" src="images/smartbusiness2.jpg" alt="De competenties overzichtelijk verdeeld per categorie" style="width:200%">
+                     </div>
+                     <div id="myModal" class="modal">
+                       <span class="close">&times;</span>
+                       <img class="modal-content" id="img01">
+                       <div id="caption"></div>
+                     </div>
+                </div></div>
+                  <p>Tekst over smart business</p>
+               <div class="fakeimg" style="height:515px;"><div class="row">
+                  <div class="column">
+                    <img class="myImages" id="myImg" src="images/Value Map smart industry.png" alt="Mijn ingevulde valuemap" style="width:350%">
+                    </div>
+                  </div>
                </div>
-                  <p>Les met jos sanders en luc doorenbosch</p>
-                </div>
+               <p>Tekst over value map</p>
+               </div>
+                  <div class="card">
+                     <h2>Week 3</h2>
+                     <h5>12 September tot en met 16 September, 2022</h5>
+                     <div class="fakeimg" style="height:270px;"><div class="row">
+                      <div class="column">
+                        <img class="myImages" id="myImg" src="images/bmcaxa.jpg" alt="BMC over casusvraag" style="width:100%">
+                        </div>
+                        <div class="column">
+                        <img class="myImages" id="myImg" src="images/mindmap.jpg" alt="Mindmap met out-of-the-box ideeën" style="width:100%">
+                        </div>
+                        <div class="column">
+                        <img class="myImages" id="myImg" src="images/oplossing.jpg" alt="De oplossing die we bedacht hebben" style="width:100%">
+                        </div>
+                        <div class="column">
+                        <img class="myImages" id="myImg" src="images/bmcoplossing.jpg" alt="Het nieuwe BMC met daarin de oplossing verwerkt" style="width:100%">
+                        </div>
+                        <div id="myModal" class="modal">
+                          <span class="close">&times;</span>
+                          <img class="modal-content" id="img01">
+                          <div id="caption"></div>
+                        </div>
+                   </div></div>
+                     <p>Tekst over maken bmc, brainstorm, nieuwe bmc en veranderplan verzekering axa</p>
+                  </div>
+                  <div class="card">
+                     <h2>Week 5</h2>
+                     <h5>26 September tot en met 30 September, 2022</h5>
+                     <div class="fakeimg" style="height: 390px;">
+                           <div class="row">
+                             <div class="column">
+                              <img src="images/elk1.png" alt="ELK Nijmegen" style="width:200%">
+                             </div>
+                             <div class="column"></div>
+                             <div class="column">
+                              <img src="images/elk2.png" alt="ELK Nijmegen" style="width:200%">
+                             </div>
+                          </div>
+                       </div>
+                       <p>Tekst over bedrijfsbezoek elk en blinklane consultant</p>
+                    </div>
    </body>
-
+   <script>
+      // create references to the modal...
+      var modal = document.getElementById('myModal');
+      // to all images -- note I'm using a class!
+      var images = document.getElementsByClassName('myImages');
+      // the image in the modal
+      var modalImg = document.getElementById("img01");
+      // and the caption in the modal
+      var captionText = document.getElementById("caption");
+      
+      // Go through all of the images with our custom class
+      for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        // and attach our click listener for this image.
+        img.onclick = function(evt) {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+      }
+      
+      var span = document.getElementsByClassName("close")[0];
+      
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      </script>
 </html>
