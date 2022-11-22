@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Mijn Portfolio</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+      </head>
+   <body>
+      <p><a href="Home.html">
+         <img src="images\han.png" alt="MSI logo" style="float:left;width:100px;height:42px;">
+       </a>
+      </p>
+         <!-- Headings -->
+         <H1>Smart Me</H1>
+         <!-- Paragraaf -->
+         <P>
+         Op deze pagina ga ik een portfolio maken met betrekking tot mijn vooruitgang tijdens het vak Smart Me.
+         </P>
+         <section>
+            <div class="topnav">
+               <a href="Home.html">Home</a>
+               <a href="Smart connection.html">Smart Connection</a>
+               <a href="Smart technology.html">Smart Technology</a>
+               <a href="Smart project.html">Smart Project</a>
+               <a href="Smart business.html">Smart Business</a>
+               <a class="active" href="Smart me.html">Smart Me</a>
+             </div>
+         </section>
+         <div class="card">
+            <h2>Week 7 tot en met week 12</h2>
+            <h5>5 Oktober tot en met 8 November 2022</h5>
+            <div class="fakeimg" style="height:210px;"><div class="row">
+             <div class="column">
+               <img class="myImages" id="myImg" src="images/bmcaxa.jpg" alt="Plaatsen van componenten" style="width:50%">
+               </div>
+               <div class="column">
+               <img class="myImages" id="myImg" src="images/mindmap.jpg" alt="Tekenen van bakje" style="width:50%">
+               </div>
+               <div class="column">
+               <img class="myImages" id="myImg" src="images/oplossing.jpg" alt="Tekenen van de deksel" style="width:50%">
+               </div>
+               <div class="column">
+               <img class="myImages" id="myImg" src="images/bmcoplossing.jpeg" alt="Het bakje in zijn geheel" style="width:50%">
+               </div>
+               <div id="myModal" class="modal">
+                 <span class="close">&times;</span>
+                 <img class="modal-content" id="img01">
+                 <div id="caption"></div>
+               </div>
+          </div></div>
+            <p>Tekst over 3D modelleren.</p>
+         </div>
+   </body>
+<script>
+// create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+</html>
