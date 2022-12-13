@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Mijn Portfolio</title>
+      <title>Mijn Portfolio | Koen Jacobs</title>
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <link rel="shortcut icon" type="image/png" href="images/favicon.png">
       </head>
    <body>
-      <p><a href="Home.html">
-         <img src="images\han.png" alt="MSI logo" style="float:left;width:100px;height:42px;">
-       </a>
-      </p>
-         <!-- Headings -->
-         <H1>Smart Me</H1>
-         <!-- Paragraaf -->
-         <P>
-         Op deze pagina ga ik een portfolio maken met betrekking tot mijn vooruitgang tijdens het vak Smart Me.
-         </P>
-         <section>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+         <div class="topnav" id="myTopnav">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+               <i class="fa fa-bars"></i>
+            <a href="Smart me.html">Smart Me</a>
+            <a href="Smart business.html">Smart Business</a> 
+            <a href="Smart project.html">Smart Project</a>
+            <a href="Smart technology.html">Smart Technology</a>
+            <a class="active" href="Smart connection.html">Smart Connection</a>
+            <a href="Home.html">Home</a>
+           </a>
+           <img src="images\han.png" alt="MSI logo" style="float:left;width:155px;height:54px;margin-top:25px;padding-left: 10px;padding-right:15px;">
+           <H1 style="color:white;margin-top:36px;float: left;">MIJN PORTFOLIO</H1>
+         </div>
             <div class="topnav">
                <a href="Home.html">Home</a>
                <a href="Smart connection.html">Smart Connection</a>
@@ -48,7 +52,7 @@
           <div class="card">
                 <h2>Week 4</h2>
                 <h5>19 September tot en met 23 September, 2022</h5>
-                       <div class="fakeimg" style="height:540px;"><iframe src="/images/mijn_match_met_morgen.pdf" width="100%" height="500px" alt="HAN" class="center">
+                       <div class="fakeimg" style="height:540px;"><iframe src="mijn_match_met_morgen.pdf" width="100%" height="500px" alt="HAN" class="center">
                       </iframe></div>
                       <p>Les met jos sanders en luc
                          doorenbosch</p>
@@ -86,6 +90,33 @@ var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function() {
   modal.style.display = "none";
+}
+
+      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+} 
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var topnav = document.getElementById("myTopnav");
+
+// Get the offset position of the navbar
+var sticky = topnav.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    topnav.classList.add("sticky")
+  } else {
+    topnav.classList.remove("sticky");
+  }
 }
 </script>
 </html>
