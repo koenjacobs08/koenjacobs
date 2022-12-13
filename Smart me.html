@@ -11,25 +11,16 @@
          <div class="topnav" id="myTopnav">
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                <i class="fa fa-bars"></i>
-            <a href="Smart me.html">Smart Me</a>
+            <a class="active"href="Smart me.html">Smart Me</a>
             <a href="Smart business.html">Smart Business</a> 
             <a href="Smart project.html">Smart Project</a>
             <a href="Smart technology.html">Smart Technology</a>
-            <a class="active" href="Smart connection.html">Smart Connection</a>
+            <a href="Smart connection.html">Smart Connection</a>
             <a href="Home.html">Home</a>
            </a>
            <img src="images\han.png" alt="MSI logo" style="float:left;width:155px;height:54px;margin-top:25px;padding-left: 10px;padding-right:15px;">
            <H1 style="color:white;margin-top:36px;float: left;">MIJN PORTFOLIO</H1>
-         </div>
-            <div class="topnav">
-               <a href="Home.html">Home</a>
-               <a href="Smart connection.html">Smart Connection</a>
-               <a href="Smart technology.html">Smart Technology</a>
-               <a href="Smart project.html">Smart Project</a>
-               <a href="Smart business.html">Smart Business</a>
-               <a class="active" href="Smart me.html">Smart Me</a>
-             </div>
-         </section>
+          </div>
          <div class="container">
           <div class="row">
             <div class="leftcolumn">
@@ -66,33 +57,7 @@
           </div>
    </body>
 <script>
-// create references to the modal...
-var modal = document.getElementById('myModal');
-// to all images -- note I'm using a class!
-var images = document.getElementsByClassName('myImages');
-// the image in the modal
-var modalImg = document.getElementById("img01");
-// and the caption in the modal
-var captionText = document.getElementById("caption");
-
-// Go through all of the images with our custom class
-for (var i = 0; i < images.length; i++) {
-  var img = images[i];
-  // and attach our click listener for this image.
-  img.onclick = function(evt) {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  }
-}
-
-var span = document.getElementsByClassName("close")[0];
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
