@@ -89,10 +89,9 @@ body{
   /* Fake image */
   .fakeimg {
 	background-color: #aaa;
-	width: 88.5%;
+	width: 100%;
 	text-align: center;
 	padding: 20px;
-	padding-right: 10px;
 	
   }
 
@@ -107,7 +106,11 @@ body{
 	width: 150%;
 	padding: 20px;
 	margin-top: 20px;
-	padding-right: 20px;
+	margin-right: 20px;
+	text-align-last: left;
+	text-align: justify;
+    overflow-wrap: break-word;
+	padding-right: 170px;
   }
   
   /* Clear floats after the columns */

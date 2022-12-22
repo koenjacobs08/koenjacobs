@@ -76,11 +76,46 @@
                      <div id="caption"></div>
                    </div>
               </div>
-                <p>Tekst over kleurentest van Caluwé.</p>
+                <p>Tijdens de terugkomdag van 9 November hebben we samen met Yvonne Peterman het dinamo-model ingevuld. 
+                   Tijdens het bespreken hiervan is er ook een ronde geweest waarbij de kleurentest van Caluwé besproken is. 
+                   Deze test geeft aan hoe jij tegenover verandering staat. Hierbij staat iedere manier van denken voor een andere kleur. 
+                   De betekenis van iedere kleur is in bovenstaande afbeelding te zien. In de linker afbeelding is mijn uitkomst van de test te zien. 
+                   Aan de hand van deze resultaten is te zien dat ik een blauwe veranderaar ben. 
+                   Daarna is geel ook een hoge score, waarbij wit en groen onder het gemiddelde score. 
+                   De blauwe kleur heeft mij een betekenis dat ik veranderingen heel rationeel bekijk, eerst ontwerp en dan realiseer. 
+                   Hierbij doe ik eerst onderzoek naar de beste mogelijkheid en de implementatie ervan goed onderzoeken. 
+                   Om dit te kunnen moet je analytisch, transparant en navolgbaar zijn. Dit zijn drie kenmerken die mij erg goed liggen.
+                   Maar als ik kijk naar de kenmerken van een gele veranderaar denk ik dat deze ook goed mij bij aansluiten.</p>
              </div>
           </div>
    </body>
 <script>
+ // create references to the modal...
+ var modal = document.getElementById('myModal');
+      // to all images -- note I'm using a class!
+      var images = document.getElementsByClassName('myImages');
+      // the image in the modal
+      var modalImg = document.getElementById("img01");
+      // and the caption in the modal
+      var captionText = document.getElementById("caption");
+      
+      // Go through all of the images with our custom class
+      for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        // and attach our click listener for this image.
+        img.onclick = function(evt) {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+      }
+      
+      var span = document.getElementsByClassName("close")[0];
+      
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+   
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
   var x = document.getElementById("myTopnav");
