@@ -14,8 +14,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="topnav" id="myTopnav">
-   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
    <a href="Competenties.html">Competenties</a>
    <a href="Smart me.html">Smart Me</a>
    <a href="Smart business.html">Smart Business</a> 
@@ -23,7 +21,9 @@
    <a href="Smart technology.html">Smart Technology</a>
    <a href="Smart connection.html">Smart Connection</a>
    <a class="active" href="Home.html">Home</a>
-  </a>
+   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
   <img src="images\han.png" alt="MSI logo" style="float:left;width:155px;height:54px;margin-top:25px;padding-left: 10px;padding-right:15px;">
   <H1 style="color:white;margin-top:36px;float: left;">MIJN PORTFOLIO</H1>
 </div>
@@ -91,15 +91,8 @@
          target="_blank"><img src="images\linkedin.png" alt="LinkedIn" style="float:center;"></a>
    </div>
    <script>
-      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-} 
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 
@@ -116,7 +109,16 @@ function myFunction() {
   } else {
     topnav.classList.remove("sticky");
   }
+  
 }
+
+function myFunction() 
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
    </script>
 </body>
 
