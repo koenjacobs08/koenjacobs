@@ -51,7 +51,7 @@
             <div class="card">
                <h2>Over mij</h2>
                <h5>Een korte beschrijving over mezelf</h5>
-               <div class="fakeimg" style="height: 310px;">
+               <div class="fakeimg" style="height: 395px;">
                   <div class="row">
                      <div class="column">
                         <img src="images\koenjacobs.jpg" alt="Portret" style="width:100%">
@@ -91,8 +91,15 @@
          target="_blank"><img src="images\linkedin.png" alt="LinkedIn" style="float:center;"></a>
    </div>
    <script>
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-
+//* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+var x = document.getElementById("myTopnav");
+if (x.className === "topnav") {
+  x.className += " responsive";
+} else {
+  x.className = "topnav";
+}
+} 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 
@@ -104,21 +111,37 @@ var sticky = topnav.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    topnav.classList.add("sticky")
-  } else {
-    topnav.classList.remove("sticky");
+if (window.pageYOffset >= sticky) {
+  topnav.classList.add("sticky")
+} else {
+  topnav.classList.remove("sticky");
+}
+}
+// create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
   }
-  
 }
 
-function myFunction() 
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
    </script>
 </body>
 

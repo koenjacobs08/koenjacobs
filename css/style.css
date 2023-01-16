@@ -109,8 +109,8 @@ body{
 	margin-right: 20px;
 	text-align-last: left;
 	text-align: justify;
-    overflow-wrap: break-word;
-	padding-right: 170px;
+    word-wrap: break-word;
+	padding-right: 205px;
   }
   
   /* Clear floats after the columns */
